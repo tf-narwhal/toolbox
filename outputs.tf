@@ -12,7 +12,3 @@ output "environment" {
   value = split("-", terraform.workspace)[0]
   description = "Infrastructure environment parsed from terraform workspace. ex: 'development-us-east-1'"
 }
-
-output "git_repo_url" {
-  value = data.git_remote_origin.repo.url
-}
